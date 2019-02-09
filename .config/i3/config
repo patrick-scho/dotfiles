@@ -1,0 +1,169 @@
+set $mod Mod4
+
+gaps inner 2
+smart_gaps on
+smart_borders on
+default_border pixel 1
+
+# Autostart
+exec --no-startup-id xset r rate 260 50
+exec --no-startup-id xrandr --dpi 120
+exec --no-startup-id xinput set-prop "ETPS/2 Elantech Touchpad" "libinput Tapping Enabled" 1
+exec --no-startup-id xinput set-prop "ETPS/2 Elantech Touchpad" "libinput Natural Scrolling Enabled" 1
+exec --no-startup-id setxkbmap -layout de
+exec --no-startup-id wal -R
+exec --no-startup-id ~/.fehbg
+exec --no-startup-id --no-startup-id "compton -b --config ~/.config/compton/compton.conf"
+exec --no-startup-id unclutter
+exec --no-startup-id volumeicon
+exec --no-startup-id nm-applet
+exec --no-startup-id conky
+
+
+# Key bindings
+bindsym $mod+b exec trun n bmenu
+bindsym $mod+c exec ~/.scripts/confmenu
+bindsym $mod+d exec rofi -show run
+bindsym $mod+e exec trun n nnn
+bindsym $mod+f fullscreen toggle
+bindsym $mod+h split h
+bindsym $mod+i exec chromium
+bindsym $mod+k exec i3keysmenu
+bindsym $mod+m bar mode toggle
+bindsym $mod+n exec notemenu
+bindsym $mod+p exec arandr
+bindsym $mod+q kill
+bindsym $mod+r restart
+bindsym $mod+s exec autoscriptmenu
+bindsym $mod+t exec thememenu
+bindsym $mod+v split v
+bindsym $mod+w exec wallpapermenu 
+bindsym $mod+x exec shutdownmenu
+bindsym $mod+z exec trun n htop
+bindsym $mod+space floating toggle
+#bindsym $mod+minus exec changedpi -10
+#bindsym $mod+plus exec changedpi 10
+bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Shift+c reload
+bindsym $mod+Shift+e exec "i3-msg exit"
+bindsym $mod+Shift+t exec rofi-theme-selector
+bindsym $mod+Shift+w exec walmenu
+bindsym $mod+Shift+space focus mode_toggle
+
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+bindsym $mod+Shift+Left move left 30px
+bindsym $mod+Shift+Down move down 30px
+bindsym $mod+Shift+Up move up 30px
+bindsym $mod+Shift+Right move right 30px
+bindsym $mod+Ctrl+Left resize shrink width 30 px or 10 ppt
+bindsym $mod+Ctrl+Right resize grow width 30 px or 10 ppt
+bindsym $mod+Ctrl+Up resize shrink height 30 px or 10 ppt
+bindsym $mod+Ctrl+Down resize grow height 30 px or 10 ppt
+
+bindsym $mod+Shift+plus gaps inner all plus 2
+bindsym $mod+Shift+minus gaps inner all minus 2
+
+
+# Workspace bindings
+set $ws1 "Δ"
+set $ws2 "Γ"
+set $ws3 "Θ"
+set $ws4 "Λ"
+set $ws5 "Ξ"
+set $ws6 "Π"
+set $ws7 "Σ"
+set $ws8 "Φ"
+set $ws9 "Ψ"
+set $ws10 "Ω"
+
+bindsym $mod+1 workspace $ws1
+bindsym $mod+2 workspace $ws2
+bindsym $mod+3 workspace $ws3
+bindsym $mod+4 workspace $ws4
+bindsym $mod+5 workspace $ws5
+bindsym $mod+6 workspace $ws6
+bindsym $mod+7 workspace $ws7
+bindsym $mod+8 workspace $ws8
+bindsym $mod+9 workspace $ws9
+bindsym $mod+0 workspace $ws10
+
+bindsym $mod+Shift+1 move container to workspace $ws1
+bindsym $mod+Shift+2 move container to workspace $ws2
+bindsym $mod+Shift+3 move container to workspace $ws3
+bindsym $mod+Shift+4 move container to workspace $ws4
+bindsym $mod+Shift+5 move container to workspace $ws5
+bindsym $mod+Shift+6 move container to workspace $ws6
+bindsym $mod+Shift+7 move container to workspace $ws7
+bindsym $mod+Shift+8 move container to workspace $ws8
+bindsym $mod+Shift+9 move container to workspace $ws9
+bindsym $mod+Shift+0 move container to workspace $ws10
+
+floating_modifier $mod
+
+
+# Use with wal
+set_from_resource $fg i3wm.color7 #f0f0f0
+set_from_resource $bg i3wm.color0 #f0f0f0
+set_from_resource $bc i3wm.color4 #f0f0f0
+set_from_resource $c0 i3wm.color0
+set_from_resource $c1 i3wm.color1
+set_from_resource $c2 i3wm.color2
+set_from_resource $c3 i3wm.color3
+set_from_resource $c4 i3wm.color4
+set_from_resource $c5 i3wm.color5
+set_from_resource $c6 i3wm.color6
+set_from_resource $c7 i3wm.color7
+
+# class                 border  backgr. text indicator child_border
+client.focused          $bg     $bg     $fg  $bg       $bg
+client.focused_inactive $bg     $bg     $fg  $bg       $bg
+client.unfocused        $bg     $fg     $bg  $bg       $bg
+client.urgent           $bg     $bg     $fg  $bg       $c1
+client.placeholder      $bg     $bg     $fg  $bg       $bg
+
+client.background       $bg
+
+bar {
+	i3bar_command i3bar
+	status_command i3status
+	position top
+  height 36
+
+    font xft:"Bitstream Vera Sans 24"
+
+    colors {
+        background $bg
+        statusline $fg
+        separator  $c7
+
+#                 	  	   border  backgr. text
+        focused_workspace  $c1     $c1     $bg
+        active_workspace   $c1     $c1     $bg
+        inactive_workspace $c0     $c0     $fg
+        binding_mode       #16a085 #2C2C2C #F9FAF9
+        urgent_workspace   #16a085 #FDF6E3 #E5201D
+    }
+}
+
+
+# Pulse Audio controls
+#bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% #increase sound volume
+#bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5% #decrease sound volume
+#bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle # mute sound
+
+# Sreen brightness controls
+bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
+bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
+
+# Touchpad controls
+bindsym XF86TouchpadToggle exec ~/scripts/toggletouchpad # toggle touchpad
+
+# Media player controls
+bindsym XF86AudioPlay exec playerctl play
+bindsym XF86AudioPause exec playerctl pause
+bindsym XF86AudioNext exec playerctl next
+bindsym XF86AudioPrev exec playerctl previous
+
