@@ -1,0 +1,5 @@
+#!/bin/fish
+
+set decision (ls -t $HOME/.notes | rofi -dmenu -p Select)
+
+trun n vim $HOME/.notes/$decision

@@ -1,0 +1,12 @@
+#urxvt*depth: 32
+#urxvt*background: rgba:0000/0000/0000/c800
+#urxvt*borderColor: rgba:0000/0000/0000/0000
+urxvt*internalBorder: 0
+urxvt*scrollBar: false
+
+urxvt*font: xft:meslolgs-regular:pixelsize=18
+urxvt*perl-ext-common: font-size
+urxvt*keysym*Control-Up:	\033[1;5A
+urxvt*keysym*Control-Down:	\033[1;5B
+urxvt*keysym*Control-Left:	\033[1;5D
+urxvt*keysym*Control-Right:	\033[1;5C

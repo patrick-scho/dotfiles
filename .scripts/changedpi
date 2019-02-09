@@ -1,0 +1,10 @@
+#!/bin/fish
+
+set c "$HOME/.config/i3/dpi"
+set dpi (cat $c)
+
+echo (math $dpi + $argv[1]) > $c
+
+xrandr --dpi (math $dpi + $argv[1])
+
+polybar-msg hook dpi 1

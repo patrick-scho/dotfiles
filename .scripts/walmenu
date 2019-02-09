@@ -1,0 +1,3 @@
+#!/bin/fish
+
+feh -A ";wal -i %f" $HOME/images/wallpapers/

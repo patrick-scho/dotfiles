@@ -1,0 +1,10 @@
+#!/bin/fish
+
+set decision (echo "lock
+shutdown
+reboot
+logout
+suspend" | runrofi)
+
+i3exit $decision
+

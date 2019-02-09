@@ -1,0 +1,7 @@
+#!/bin/fish
+
+set decision (nmcli -f NAME -t con show | rofi -dmenu -p Select)
+
+if test -n "$decision"
+	nmcli con up $decision
+end

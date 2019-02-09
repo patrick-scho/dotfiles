@@ -1,0 +1,17 @@
+#!/bin/fish
+
+set file "$HOME/.scripts/$argv[1]"
+
+if test ! -e $file
+echo "#!/bin/fish
+
+set decision (echo \"
+\" | rofi -dmenu -p Select)
+
+switch $decision
+	case 
+end" > $file
+chmod +x $file
+end
+
+trun $EDITOR $file

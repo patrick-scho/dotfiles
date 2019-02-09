@@ -1,0 +1,7 @@
+#!/bin/fish
+
+if [ $argv[1] = "n" ]
+	urxvt -e fish -c "$argv[2..-1]" &
+else
+	eval $argv
+end

@@ -1,0 +1,43 @@
+#!/bin/fish
+
+#set wal (wal --theme)
+
+set choices ""
+set prefix ""
+
+for x in (wal --theme)
+	if test (string sub -l 3 $x) = " - "
+		set newchoice "$prefix" (string sub -s 4 $x)
+		if test -z "$choices"
+			set choices $newchoice
+		else
+			set choices "$choices
+$newchoice"
+		end
+	else
+		switch $prefix
+			case "light"
+				set prefix "extra"
+			case "dark"
+				set prefix "light"
+			case ""
+				set prefix "dark"
+		end
+	end
+end
+
+set decision (echo $choices | runrofi)
+
+set theme (string split " " $decision)[2]
+
+if test (string sub -l 5 $decision) = "light"
+	wal -l -g -f $theme
+	echo "#!/bin/sh
+wal -l -g -f $theme" > ~/.config/wal/current
+else
+	wal -g -f $theme
+	echo "#!/bin/sh
+wal -g -f $theme" > ~/.config/wal/current
+end
+
+chmod +x ~/.config/wal/current

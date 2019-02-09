@@ -1,0 +1,3 @@
+#!/bin/fish
+
+feh -A ";feh --bg-fill %f" $HOME/images/wallpapers/

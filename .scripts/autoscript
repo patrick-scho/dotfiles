@@ -1,0 +1,13 @@
+#!/bin/fish
+
+set file "$HOME/.scripts/$argv[1]"
+
+if test ! -e $file
+echo "#!/bin/fish
+" > $file
+chmod +x $file
+end
+
+if test -f $file
+trun $EDITOR $file
+end

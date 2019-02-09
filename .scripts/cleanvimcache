@@ -1,0 +1,3 @@
+#!/bin/fish
+
+rm $HOME/.cache/vim/swap/*

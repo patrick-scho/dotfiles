@@ -1,0 +1,14 @@
+#!/bin/fish
+
+set decision (echo ".xinitrc
+.Xdefaults
+.config/i3/config
+.config/nvim/init.vim
+.config/fish/config.fish
+.config/polybar/config
+.config/rofi/config
+.config/compton/compton.conf" | runrofi)
+
+if test -f "$HOME/$decision"
+trun n $EDITOR $HOME/$decision
+end

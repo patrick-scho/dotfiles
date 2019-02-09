@@ -1,0 +1,5 @@
+#!/bin/fish
+
+set file $HOME/.config/i3/config
+
+string replace "bindsym " "" (cat $file | grep bindsym) | rofi -dmenu -p Keybindings
