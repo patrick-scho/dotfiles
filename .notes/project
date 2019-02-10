@@ -1,0 +1,7 @@
+create_answer:
+input question, sentence, question_type
+output 0-x Antworten
+
+in main:
+	answers = []
+	while len(answers) < 10 or 

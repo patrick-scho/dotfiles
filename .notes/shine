@@ -1,0 +1,12 @@
+git clone https://github.com/richardhundt/shine.git
+prompt for username -> press enter
+cd deps/tvmjit
+git clone https://github.com/richardhundt/tvmjit.git .
+cd ../..
+make bootstrap
+cd deps
+rm uthread/.git
+git clone https://github.com/richardhundt/uthread.git uthread
+rm upoll/.git
+git clone https://github.com/richardhundt/upoll.git upoll
+sudo make install
