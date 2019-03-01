@@ -1,6 +1,6 @@
 #!/bin/fish
 
-set file "$HOME/.scripts/$argv[1]"
+set file "$HOME/.all/scripts/$argv[1]"
 
 if test ! -e $file
 echo "#!/bin/fish

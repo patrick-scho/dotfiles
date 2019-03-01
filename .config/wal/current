@@ -1,2 +1,2 @@
 #!/bin/sh
-wal -g -f sexy-monokai
+wal -f sexy-monokai

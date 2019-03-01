@@ -22,7 +22,7 @@ exec --no-startup-id conky
 
 # Key bindings
 bindsym $mod+b exec trun n bmenu
-bindsym $mod+c exec ~/.scripts/confmenu
+bindsym $mod+c exec confmenu
 bindsym $mod+d exec rofi -show run
 bindsym $mod+e exec trun n nnn
 bindsym $mod+f fullscreen toggle

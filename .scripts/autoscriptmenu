@@ -1,5 +1,0 @@
-#!/bin/fish
-
-set decision (ls $HOME/.scripts | runrofi)
-
-trun n autoscript $decision

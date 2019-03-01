@@ -31,13 +31,13 @@ set decision (echo $choices | runrofi)
 set theme (string split " " $decision)[2]
 
 if test (string sub -l 5 $decision) = "light"
-	wal -l -g -f $theme
+	wal -l -f $theme
 	echo "#!/bin/sh
-wal -l -g -f $theme" > ~/.config/wal/current
+wal -l -f $theme" > ~/.config/wal/current
 else
-	wal -g -f $theme
+	wal -f $theme
 	echo "#!/bin/sh
-wal -g -f $theme" > ~/.config/wal/current
+wal -f $theme" > ~/.config/wal/current
 end
 
 chmod +x ~/.config/wal/current

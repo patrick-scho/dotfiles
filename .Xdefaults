@@ -1,6 +1,10 @@
 #urxvt*depth: 32
-#urxvt*background: rgba:0000/0000/0000/c800
+#urxvt*background: [50]#000000
 #urxvt*borderColor: rgba:0000/0000/0000/0000
+#urxvt*inheritPixmap: true
+#urxvt*transparent: true
+#urxvt*shading: 80
+#urxvt*blurRadius: 20
 urxvt*internalBorder: 0
 urxvt*scrollBar: false
 
