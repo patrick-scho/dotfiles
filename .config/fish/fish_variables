@@ -1,7 +1,10 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
+SETUVAR HAXE_HOME:/home/patrick/\x2eall/bin/haxe\x2edir/
+SETUVAR --path HAXE_STD_PATH:/home/patrick/\x2eall/bin/haxe\x2edir/std/
 SETUVAR __fish_init_2_39_8:\x1d
 SETUVAR __fish_init_2_3_0:\x1d
+SETUVAR __fish_init_3_x:\x1d
 SETUVAR _fish_abbr_c:clear
 SETUVAR _fish_abbr_e:exit
 SETUVAR fish_color_autosuggestion:555\x1ebrblack

@@ -1,0 +1,7 @@
+*
+!.all/
+!.config/
+!.scripts/
+!.Xdefaults
+!.Xresources
+!.profile

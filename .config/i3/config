@@ -27,8 +27,9 @@ bindsym $mod+d exec rofi -show run
 bindsym $mod+e exec trun n nnn
 bindsym $mod+f fullscreen toggle
 bindsym $mod+h split h
-bindsym $mod+i exec chromium
+bindsym $mod+i exec firefox
 bindsym $mod+k exec i3keysmenu
+bindsym $mod+l layout toggle tabbed split
 bindsym $mod+m bar mode toggle
 bindsym $mod+n exec notemenu
 bindsym $mod+p exec arandr
