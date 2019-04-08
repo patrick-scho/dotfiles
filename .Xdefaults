@@ -8,7 +8,7 @@
 urxvt*internalBorder: 0
 urxvt*scrollBar: false
 
-urxvt*font: xft:meslolgs-regular:pixelsize=18
+urxvt*font: xft:meslolgs-regular:pixelsize=14
 urxvt*perl-ext-common: font-size
 urxvt*keysym*Control-Up:	\033[1;5A
 urxvt*keysym*Control-Down:	\033[1;5B

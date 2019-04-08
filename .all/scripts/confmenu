@@ -4,6 +4,7 @@ set decision (echo ".xinitrc
 .Xdefaults
 .config/i3/config
 .config/nvim/init.vim
+.emacs.d/init.el
 .config/fish/config.fish
 .config/polybar/config
 .config/rofi/config
