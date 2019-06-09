@@ -9,6 +9,8 @@ nuklear
 island
 
 C++:
+winlamb
+winui
 Cinder
 OpenFrameworks
 SFML
@@ -17,10 +19,13 @@ Irrlicht
 Magnum
 bgfx
 oryol
+libxd
 Kore
 urho3d
 nana
+nanogui
 IMGUI
 GLFW
 bs::framework
 (Ogre)
+(horde3d)

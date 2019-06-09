@@ -15,19 +15,7 @@ nnoremap <Space> za
 nnoremap <Tab> :bn<CR>
 nnoremap <S-Tab> :bp<CR>
 
-" deoplete
-let g:deoplete#enable_at_startup = 1
-
-" LanguageClient
-set hidden
-let g:LanguageClient_serverCommands = {
-    \ 'javascript': ['javascript-typescript-stdio'],
-    \ 'typescript': ['javascript-typescript-stdio']
-    \ }
-
-nnoremap <F5> :call LanguageClient_contextMenu()<CR>
-nnoremap <F2> :call LanguageClient#textDocument_hover()<CR>
-nnoremap <F3> :pc<CR>
+autocmd FileType nim nnoremap <CR> :!nim cpp -r main.nim<CR>
 
 " vim-plug
 call plug#begin('~/.local/share/nvim/plugged')
@@ -40,7 +28,7 @@ Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
 
 Plug 'jdonaldson/vaxe'
 
-Plug 'w0rp/ale'
+"Plug 'w0rp/ale'
 
 call plug#end()
 

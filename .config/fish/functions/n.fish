@@ -1,4 +1,4 @@
-# Defined in /tmp/fish.P5dhaN/n.fish @ line 2
+# Defined in /tmp/fish.ddDza6/n.fish @ line 2
 function n
-	eval $EDITOR "$HOME/.notes/$argv[1]"
+	eval $EDITOR "$HOME/.all/notes/$argv[1]"
 end

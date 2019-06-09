@@ -6,6 +6,7 @@ smart_borders on
 default_border pixel 1
 
 # Autostart
+exec --no-startup-id spotifyd --no-daemon
 exec --no-startup-id xset r rate 260 50
 exec --no-startup-id xrandr --dpi 120
 exec --no-startup-id xinput set-prop "ETPS/2 Elantech Touchpad" "libinput Tapping Enabled" 1
@@ -13,7 +14,7 @@ exec --no-startup-id xinput set-prop "ETPS/2 Elantech Touchpad" "libinput Natura
 exec --no-startup-id setxkbmap -layout de
 exec --no-startup-id wal -R
 exec --no-startup-id ~/.fehbg
-exec --no-startup-id --no-startup-id "compton -b --config ~/.config/compton/compton.conf"
+exec --no-startup-id "compton -b --config ~/.config/compton/compton.conf"
 exec --no-startup-id unclutter
 exec --no-startup-id volumeicon
 exec --no-startup-id nm-applet
@@ -69,15 +70,15 @@ bindsym $mod+Shift+minus gaps inner all minus 2
 
 
 # Workspace bindings
-set $ws1 "Δ"
-set $ws2 "Γ"
-set $ws3 "Θ"
-set $ws4 "Λ"
-set $ws5 "Ξ"
-set $ws6 "Π"
-set $ws7 "Σ"
-set $ws8 "Φ"
-set $ws9 "Ψ"
+set $ws1  "Δ"
+set $ws2  "Γ"
+set $ws3  "Θ"
+set $ws4  "Λ"
+set $ws5  "Ξ"
+set $ws6  "Π"
+set $ws7  "Σ"
+set $ws8  "Φ"
+set $ws9  "Ψ"
 set $ws10 "Ω"
 
 bindsym $mod+1 workspace $ws1
